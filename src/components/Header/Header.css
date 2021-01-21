@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: #502274;
+}
+
+h1 {
+  align-self: center;
+  font-weight: normal;
+  font-size: 40px;
+}
+
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav > a {
+  margin: 10px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 > a,
+nav > a {
+  color: #f0e2e7;
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > a {
+  color: #502274;
+  margin: 5px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

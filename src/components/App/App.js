@@ -17,7 +17,7 @@ export default class App extends Component {
     console.error(error)
     return { hasError: true }
   }
-
+  
   render() {
     const { hasError } = this.state
     return (
@@ -25,7 +25,7 @@ export default class App extends Component {
         <Header />
         <main>
           {hasError && (
-            <p>There was an error! Oh no!</p>
+            <p className="error-message">There was an error! Oh no!</p>
           )}
           <Switch>
             <PrivateRoute

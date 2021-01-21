@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eff7ff;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  max-width: 560px;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.form-control {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  margin: 10px;
+}
+
+button {
+  background-color: #44ffd1;
+  border: none;
+  color: black;
+  font-weight: 550;
+  padding: 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 8px;
+  width: 100px;
+  transition: all 0.4s;
+  margin: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #53a2be;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+section > p {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 3px;
+}
+
+h2 {
+    color: #502274;
+}
+
+.error-message {
+    color: #FF1B1C;
+}
+
+@media all and (max-width: 450px) {
+  .form-control {
+    width: 90%;
+  }
+
+  nav {
+      flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
