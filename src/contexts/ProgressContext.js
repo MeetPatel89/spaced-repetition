@@ -34,6 +34,7 @@ const { Provider, Consumer } = ProgressContext;
 
 class ProgressContextProvider extends Component {
   constructor(props) {
+    super(props);
     this.state = {
       ...initialState,
     };
