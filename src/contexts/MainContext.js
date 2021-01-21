@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 
-const { Provider, Consumer } = React.createContext({
+const MainContext = React.createContext({
   language: [],
   words: [],
   setLanguage: () => {},
   setWords: () => {},
 });
+
+export default MainContext;
+
+export const { Provider, Consumer } = MainContext;
 
 class MainContextProvider extends Component {
   constructor(props) {

@@ -13,7 +13,7 @@ const initialState = {
   isResultDisplayed: false,
 };
 
-const { Provider, Consumer } = React.createContext({
+const ProgressContext = React.createContext({
   ...initialState,
   setError: () => {},
   clearError: () => {},
@@ -27,6 +27,10 @@ const { Provider, Consumer } = React.createContext({
   reset: () => {},
   setIsResultDisplayed: () => {},
 });
+
+export default ProgressContext;
+
+const { Provider, Consumer } = ProgressContext;
 
 class ProgressContextProvider extends Component {
   constructor(props) {
@@ -116,4 +120,4 @@ class ProgressContextProvider extends Component {
   }
 }
 
-export {ProgressContextProvider, Consumer as ProgressContextConsumer}
+export { ProgressContextProvider, Consumer as ProgressContextConsumer };
