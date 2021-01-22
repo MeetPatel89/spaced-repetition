@@ -2,7 +2,7 @@ import config from '../config';
 import TokenService from './token-service';
 import ProgressContext from '../contexts/ProgressContext';
 
-const fetchLanguage = () => {
+export const fetchLanguage = () => {
   return fetch(`${config.API_ENDPOINT}/language`, {
     method: 'GET',
     headers: {
@@ -17,7 +17,7 @@ const fetchLanguage = () => {
   });
 };
 
-const fetchWords = () => {
+export const fetchWords = () => {
   return fetch(`${config.API_ENDPOINT}/language/head`, {
     method: 'GET',
     headers: {
@@ -31,7 +31,7 @@ const fetchWords = () => {
   });
 };
 
-const submitGuess = (guess) => {
+export const submitGuess = (guess) => {
   const body = JSON.stringify({
     guess: guess,
   });
@@ -55,5 +55,3 @@ const submitGuess = (guess) => {
     })
     .catch((e) => console.error('Failed to fetch'));
 };
-
-export { fetchLanguage, fetchWords, submitGuess }
