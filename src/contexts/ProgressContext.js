@@ -30,9 +30,7 @@ const ProgressContext = React.createContext({
 
 export default ProgressContext;
 
-const { Provider, Consumer } = ProgressContext;
-
-class ProgressContextProvider extends Component {
+export class ProgressContextProvider extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -117,8 +115,7 @@ class ProgressContextProvider extends Component {
       setIsResultDisplayed: this.setIsResultDisplayed,
     };
 
-    return <Provider value={value}>{this.props.children}</Provider>;
+    return <ProgressContext.Provider value={value}>{this.props.children}</ProgressContext.Provider>;
   }
 }
 
-export { ProgressContextProvider, Consumer as ProgressContextConsumer };

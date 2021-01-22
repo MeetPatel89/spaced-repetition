@@ -9,7 +9,9 @@ import DashboardRoute from '../../routes/DashboardRoute/DashboardRoute';
 import LearningRoute from '../../routes/LearningRoute/LearningRoute';
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
 import './App.css';
+import { MainContextProvider } from '../../contexts/MainContext';
 import { fetchLanguage, fetchWords } from '../../services/main-service';
+
 
 export default class App extends Component {
   state = { hasError: false };
@@ -23,6 +25,7 @@ export default class App extends Component {
     const promises = [fetchLanguage(), fetchWords()];
     Promise.all(promises)
       .then((values) => {
+        console.log(values)
         this.setState({
           language: values[0].language,
           words: values[0].words,
@@ -37,23 +40,31 @@ export default class App extends Component {
   }
 
   render() {
+    console.log(fetchLanguage);
+    console.log(fetchWords);
     const { hasError } = this.state;
+    console.log(hasError)
     return (
-      <div className='App'>
-        <Header />
-        <main>
-          {Object.keys(hasError).length !== 0 && (
-            <p className='error-message'>There was an error! Oh no!</p>
-          )}
-          <Switch>
-            <PrivateRoute exact path={'/'} component={DashboardRoute} />
-            <PrivateRoute path={'/learn'} component={LearningRoute} />
-            <PublicOnlyRoute path={'/register'} component={RegistrationRoute} />
-            <PublicOnlyRoute path={'/login'} component={LoginRoute} />
-            <Route component={NotFoundRoute} />
-          </Switch>
-        </main>
-      </div>
+      <MainContextProvider>
+        <div className='App'>
+          <Header />
+          <main>
+            {hasError && (
+              <p className='error-message'>There was an error! Oh no!</p>
+            )}
+            <Switch>
+              <PrivateRoute exact path={'/'} component={DashboardRoute} />
+              <PrivateRoute path={'/learn'} component={LearningRoute} />
+              <PublicOnlyRoute
+                path={'/register'}
+                component={RegistrationRoute}
+              />
+              <PublicOnlyRoute path={'/login'} component={LoginRoute} />
+              <Route component={NotFoundRoute} />
+            </Switch>
+          </main>
+        </div>
+      </MainContextProvider>
     );
   }
 }

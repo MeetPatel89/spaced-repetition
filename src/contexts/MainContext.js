@@ -9,9 +9,7 @@ const MainContext = React.createContext({
 
 export default MainContext;
 
-export const { Provider, Consumer } = MainContext;
-
-class MainContextProvider extends Component {
+export class MainContextProvider extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,8 +38,10 @@ class MainContextProvider extends Component {
       setWords: this.setWords,
     };
 
-    return <Provider value={value}>{this.props.children}</Provider>;
+    return (
+      <MainContext.Provider value={value}>
+        {this.props.children}
+      </MainContext.Provider>
+    );
   }
 }
-
-export { MainContextProvider, Consumer as MainContextConsumer };
