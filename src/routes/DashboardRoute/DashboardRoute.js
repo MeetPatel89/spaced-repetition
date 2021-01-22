@@ -1,6 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import MainContext from '../../contexts/MainContext';
+import { fetchLanguage } from '../../services/main-service';
 
 class DashboardRoute extends Component {
+  
   render() {
     return (
       <section>
@@ -9,5 +12,7 @@ class DashboardRoute extends Component {
     );
   }
 }
+
+DashboardRoute.contextType = MainContext
 
 export default DashboardRoute
