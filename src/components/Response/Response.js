@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProgressContext from '../../contexts/ProgressContext';
+import './Response.css';
 
 export default class Response extends Component {
 
@@ -9,9 +10,9 @@ export default class Response extends Component {
 
     displayMsg = () => {
     if (this.context.isCorrect) {
-      return <h2>You were correct! :D</h2>;
+      return <h2 className="correct-try">You were correct! :D</h2>;
     } else {
-      return <h2>Good try, but not quite right :(</h2>;
+      return <h2 className="incorrect-try">Good try, but not quite right :(</h2>;
     }
   };
 

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@100;500&display=swap" rel="stylesheet');
+
+.DisplayFeedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Imbue', serif;
+}
+
+.DisplayFeedback > h2 {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.DisplayFeedback > button {
+  width: 30%;
+}
+
+.DisplayFeedback > p {
+    color: #472d30;
+    font-size: 20px;
+}
+
+.correct-try {
+  color: #564787;
+}
+
+.incorrect-try {
+  color: red;
+}
