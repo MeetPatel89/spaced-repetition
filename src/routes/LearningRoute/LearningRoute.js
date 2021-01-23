@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProgressContext from '../../contexts/ProgressContext';
 import { submitGuess, fetchWords } from '../../services/main-service';
 import Response from '../../components/Response/Response';
+import './LearningRoute.css';
 
 export default class LearningRoute extends Component {
   handleSubmit = (guess) => {
@@ -41,8 +42,9 @@ export default class LearningRoute extends Component {
         {!this.context.isResultDisplayed ? (
           <section>
             <div className='translate-container'>
-              <h2 className='instructions-header'>Translate the word:</h2>
-              <span>{this.context.nextWord}</span>
+              <h2 className='instructions-header'>
+                Translate the word: {this.context.nextWord}
+              </h2>
             </div>
             <form
               id='submit-form'
@@ -51,7 +53,9 @@ export default class LearningRoute extends Component {
                 this.handleSubmit(e.target.guessForm.value);
               }}
             >
-              <label htmlFor='learn-guess-input'>What's the translation for this word?</label>
+              <label htmlFor='learn-guess-input'>
+                What's the translation for this word?
+              </label>
               <input
                 type='text'
                 name='guessForm'
@@ -69,11 +73,11 @@ export default class LearningRoute extends Component {
             Your total score is: {this.context.totalScore}
           </p>
         </div>
-        <p className='word-score-keeper'>
+        <p className='word-correct'>
           You have answered this word correctly {this.context.wordCorrectCount}{' '}
           times.
         </p>
-        <p className='word-score-keeper'>
+        <p className='word-incorrect'>
           You have answered this word incorrectly{' '}
           {this.context.wordIncorrectCount} times.
         </p>

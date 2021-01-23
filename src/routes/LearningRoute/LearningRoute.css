@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@100;500&display=swap" rel="stylesheet');
+
+.instructions-header {
+  font-family: 'Imbue', serif;
+  color: #472d30;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.total-score {
+    font-size: 20px;
+    color: #472d30;
+}
+
+.word-correct {
+    color: #564787;
+}
+
+.word-incorrect {
+    color: red;
+}
