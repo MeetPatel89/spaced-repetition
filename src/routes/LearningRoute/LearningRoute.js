@@ -3,7 +3,7 @@ import ProgressContext from '../../contexts/ProgressContext';
 import { submitGuess, fetchWords } from '../../services/main-service';
 import Response from '../../components/Response/Response';
 
-class LearningRoute extends Component {
+export default class LearningRoute extends Component {
   handleSubmit = (guess) => {
     submitGuess(guess).then((result) => {
       this.context.setPrevWord(this.context.nextWord);
@@ -51,14 +51,14 @@ class LearningRoute extends Component {
                 this.handleSubmit(e.target.guessForm.value);
               }}
             >
-              <label htmlFor='learn-guess-input'>Translation</label>
+              <label htmlFor='learn-guess-input'>What's the translation for this word?</label>
               <input
                 type='text'
                 name='guessForm'
                 id='learn-guess-input'
                 required
               ></input>
-              <button type='submit'>Submit Answer</button>
+              <button type='submit'>Submit your answer</button>
             </form>
           </section>
         ) : (
@@ -66,7 +66,7 @@ class LearningRoute extends Component {
         )}
         <div className='DisplayScore'>
           <p className='total-score word-score-keeper'>
-            Total Score: {this.context.totalScore}
+            Your total score is: {this.context.totalScore}
           </p>
         </div>
         <p className='word-score-keeper'>
@@ -84,4 +84,3 @@ class LearningRoute extends Component {
 
 LearningRoute.contextType = ProgressContext;
 
-export default LearningRoute

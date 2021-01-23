@@ -37,6 +37,13 @@ main > section {
   align-items: center;
 }
 
+.username {
+  color: #f0e2e7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 footer > a {
   color: #502274;
   margin: 5px;

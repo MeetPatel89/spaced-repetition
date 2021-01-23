@@ -15,7 +15,7 @@ class DashboardRoute extends Component {
       return (
         <ul key={word.id} className='arr'>
           <li>
-            <p>{word.original}</p> ✅: {word.correct_count} ❌:{' '}
+            <h4>{word.original}</h4> correct answer count: {word.correct_count} incorrect answer count:{' '}
             {word.incorrect_count}
           </li>
         </ul>
@@ -25,11 +25,11 @@ class DashboardRoute extends Component {
       <section className='dashboard'>
         <h2> {this.context.language.name} </h2>
         <div className='stats'>
-          <h2>Total Score: {this.context.language.total_score} </h2>
+          <h2>Total correct answers: {this.context.language.total_score} </h2>
 
         </div>
-        <a href='/learn'>Start Practicing</a>
-        <h3> Words To Practice </h3>
+        <a href='/learn'>Start practicing</a>
+        <h3>Words to practice</h3>
         <div className='word-list'>{wordsArr}</div>
       </section>
     )
