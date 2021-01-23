@@ -16,24 +16,28 @@ class DashboardRoute extends Component {
       return (
         <ul key={word.id} className='arr'>
           <li>
-            <h4>{word.original}</h4> correct answer count: {word.correct_count} incorrect answer count:{' '}
-            {word.incorrect_count}
+            <h4 className="word">{word.original}</h4><p className="correct"> correct answer count: {word.correct_count}</p><p className="incorrect"> incorrect answer count:{' '}
+            {word.incorrect_count}</p>
           </li>
         </ul>
       );
     });
     return (
       <section className='dashboard'>
-        <h2 className="language"> {this.context.language.name} </h2>
+        <h2 className='language'> {this.context.language.name} </h2>
         <div className='stats'>
           <h2>Total correct answers: {this.context.language.total_score} </h2>
-
         </div>
-        <a href='/learn' className="practice">Start practicing</a>
-        <h3>Words to practice</h3>
-        <div className='word-list'>{wordsArr}</div>
+        <a href='/learn' className='practice'>
+          Start practicing
+        </a>
+
+        <div className='word-list'>
+          <h3>Words to practice</h3>
+          {wordsArr}
+        </div>
       </section>
-    )
+    );
 }
 }
 

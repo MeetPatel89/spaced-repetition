@@ -1,17 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@100;500&display=swap" rel="stylesheet');
+
 .language {
-    background-color: #262626;
-    color: #f0e2e7;
-    padding: 10px;
-    border-radius: 5px;
+  background-color: #262626;
+  color: #f0e2e7;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .practice {
-    background-color: #262626;
-    color: #f0e2e7;
-    padding: 10px;
-    border-radius: 5px;
+  background-color: #262626;
+  color: #f0e2e7;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
 }
 
 .practice:hover {
-    background-color: #627264;
+  background-color: #627264;
+}
+
+.word-list {
+  font-family: 'Imbue', serif;
+  
+  margin: 10px;
+  padding: 10px;
+  width: 75%;
+  background-color: #a1cda8;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-list > h3 {
+  text-align: center;
+  color: #472d30;
+  font-size: 35px;
+  font-weight: 100;
+}
+
+.arr {
+  list-style: none;
+}
+
+.incorrect {
+  color: red;
+  font-size: 20px;
+}
+
+.correct {
+  color: #564787;
+  font-size: 20px;
+}
+
+.word {
+  color: #472d30;
+  font-size: 25px;
+  font-weight: 100;
 }

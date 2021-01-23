@@ -58,7 +58,7 @@ export default class LearningRoute extends Component {
                 id='learn-guess-input'
                 required
               ></input>
-              <button type='submit'>Submit your answer</button>
+              <button type='submit'>Submit</button>
             </form>
           </section>
         ) : (
