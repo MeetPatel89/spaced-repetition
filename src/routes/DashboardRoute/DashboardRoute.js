@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MainContext from '../../contexts/MainContext';
 import { fetchLanguage } from '../../services/main-service';
+import './Dashboard.css'
 
 class DashboardRoute extends Component {
   componentDidMount() {
@@ -23,12 +24,12 @@ class DashboardRoute extends Component {
     });
     return (
       <section className='dashboard'>
-        <h2> {this.context.language.name} </h2>
+        <h2 className="language"> {this.context.language.name} </h2>
         <div className='stats'>
           <h2>Total correct answers: {this.context.language.total_score} </h2>
 
         </div>
-        <a href='/learn'>Start practicing</a>
+        <a href='/learn' className="practice">Start practicing</a>
         <h3>Words to practice</h3>
         <div className='word-list'>{wordsArr}</div>
       </section>
