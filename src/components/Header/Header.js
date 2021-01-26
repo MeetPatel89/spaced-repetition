@@ -39,7 +39,9 @@ class Header extends Component {
         <h1>
           <Link to='/'>Spaced repetition</Link>
         </h1>
-        <span className='username'>Welcome {this.context.user.name}!</span>
+        <span className='username'>
+          {this.context.user.name && `Welcome ${this.context.user.name}!`}{' '}
+        </span>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}

@@ -73,14 +73,19 @@ export default class LearningRoute extends Component {
             Your total score is: {this.context.totalScore}
           </p>
         </div>
-        <p className='word-correct'>
-          You have answered this word correctly {this.context.wordCorrectCount}{' '}
-          times.
-        </p>
-        <p className='word-incorrect'>
-          You have answered this word incorrectly{' '}
-          {this.context.wordIncorrectCount} times.
-        </p>
+        {!this.context.isResultDisplayed && (
+          <>
+            {' '}
+            <p className='word-correct'>
+              You have answered this word correctly{' '}
+              {this.context.wordCorrectCount} times.
+            </p>
+            <p className='word-incorrect'>
+              You have answered this word incorrectly{' '}
+              {this.context.wordIncorrectCount} times.
+            </p>
+          </>
+        )}
       </section>
     );
   }
