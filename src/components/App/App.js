@@ -10,8 +10,6 @@ import LearningRoute from '../../routes/LearningRoute/LearningRoute';
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute';
 import './App.css';
 
-import { fetchLanguage, fetchWords } from '../../services/main-service';
-
 export default class App extends Component {
   state = { hasError: false };
 
