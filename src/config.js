@@ -1,6 +1,5 @@
 export default {
-  
-  API_ENDPOINT: 'https://peaceful-journey-72196.herokuapp.com/api',
+  API_ENDPOINT: 'https://lit-crag-58856.herokuapp.com/api',
   /*
   API_ENDPOINT: 'http://localhost:8000/api',
   */
