@@ -18,8 +18,8 @@
 }
 
 .DisplayFeedback > p {
-    color: #472d30;
-    font-size: 20px;
+  color: #472d30;
+  font-size: 20px;
 }
 
 .correct-try {
@@ -28,4 +28,8 @@
 
 .incorrect-try {
   color: red;
+}
+
+.feedback {
+  padding: 10px;
 }

@@ -21,7 +21,7 @@ export default class Response extends Component {
           <section className='feedback'>
             <div className='DisplayFeedback'>
               {this.displayMsg()}
-              <p>
+              <p className="feedback">
                 The correct translation for{' '}
                 <span>{this.context.prevWord}</span> was{' '}
                 {this.context.answer} and you chose {this.context.guess}!
