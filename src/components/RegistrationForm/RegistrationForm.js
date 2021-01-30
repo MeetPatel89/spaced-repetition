@@ -13,6 +13,8 @@ class RegistrationForm extends Component {
 
   state = { error: null };
 
+  static contextType = UserContext;
+
   firstInput = React.createRef();
 
   handleSubmit = (ev) => {
