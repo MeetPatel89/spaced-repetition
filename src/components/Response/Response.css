@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   font-family: 'Imbue', serif;
+  margin: 5px;
 }
 
 .DisplayFeedback > h2 {
@@ -20,14 +21,19 @@
 .DisplayFeedback > p {
   color: #472d30;
   font-size: 20px;
+  padding: 10px;
 }
 
 .correct-try {
   color: #564787;
+  padding: 10px;
+  text-align: center;
 }
 
 .incorrect-try {
   color: red;
+  padding: 10px;
+  text-align: center;
 }
 
 .feedback {

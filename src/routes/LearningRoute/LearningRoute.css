@@ -8,14 +8,25 @@
 }
 
 .total-score {
-    font-size: 20px;
-    color: #472d30;
+  font-size: 20px;
+  color: #472d30;
 }
 
 .word-correct {
-    color: #564787;
+  color: #564787;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
 }
 
 .word-incorrect {
-    color: red;
+  color: red;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+h2 {
+  padding: 10px;
+  text-align: center;
 }
