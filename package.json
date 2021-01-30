@@ -35,6 +35,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "cypress": "^4.2.0",
     "jsonwebtoken": "^8.5.0",
     "unfetch": "^4.1.0"
   }
